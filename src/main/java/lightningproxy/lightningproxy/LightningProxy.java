@@ -35,4 +35,11 @@ public class LightningProxy {
             proxyServer.getCommandManager().executeImmediatelyAsync(event.getPlayer(), "global");
         }
     }
+    public void firstjoin(ServerConnectedEvent event){
+        if (event.getServer().getServerInfo().getName().equalsIgnoreCase("minigames")){
+            proxyServer.getCommandManager().executeImmediatelyAsync(event.getPlayer(), "local");
+        }else {
+            proxyServer.getCommandManager().executeImmediatelyAsync(event.getPlayer(), "global");
+        }
+    }
 }
